@@ -1,0 +1,255 @@
+.github-cta {
+  background: var(--bg-primary);
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 3.5rem 0;
+}
+
+.github-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, var(--glass-bg) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.8rem auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.cta-icon:hover {
+  transform: scale(1.1);
+  background: var(--glass-hover);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+}
+
+.cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: var(--glass-hover);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.button-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .github-cta {
+    padding: 70px 0 50px 0;
+    min-height: 75vh;
+  }
+  
+  .cta-title {
+    font-size: 1.6rem;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .cta-stats {
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .stat-item {
+    min-width: 85px;
+    padding: 1rem;
+  }
+  
+  .cta-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+  
+  .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-cta {
+    padding: 60px 0 40px 0;
+    height: 100vh;
+  }
+
+  .cta-content{
+    margin-top: -42px;
+  }
+  
+  .cta-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  
+  .cta-description {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 1.4rem;
+  }
+  
+  .cta-stats {
+    gap: 0.8rem;
+    margin-bottom: 1.4rem;
+  }
+  
+  .stat-item {
+    min-width: 75px;
+    padding: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 100px;
+  }
+  
+  .cta-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  
+}
+
+.icon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 8px;
+}

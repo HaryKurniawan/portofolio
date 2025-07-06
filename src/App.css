@@ -1,0 +1,231 @@
+/* Global App Styles */
+.App {
+  min-height: 100vh;
+}
+
+/* Section Styles */
+.section {
+  padding: 5rem 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+  position: relative;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
+  border-radius: 2px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  backdrop-filter: blur(30px);
+  color: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn:not(.btn-primary) {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.btn:not(.btn-primary):hover {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: rgba(128, 128, 128, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Glass effect utility classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-hover:hover {
+  background: var(--glass-hover);
+  border-color: var(--glass-border);
+}
+
+    .section-titlee {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0 60px 0;
+    min-height: auto;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 70px 0 50px 0;
+    min-height: auto;
+  }
+  
+  .section-title {
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+    .section-titlee {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Improved mobile animations */
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .slide-in-left {
+    transform: translateX(-30px);
+  }
+  
+  .slide-in-right {
+    transform: translateX(30px);
+  }
+  
+  .fade-in {
+    transform: translateY(20px);
+  }
+  
+  .btn {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+  }
+}
